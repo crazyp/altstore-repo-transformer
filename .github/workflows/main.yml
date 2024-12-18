@@ -1,0 +1,23 @@
+  name: Save files
+
+  on:
+    push:
+      branches:
+        - main
+
+  jobs:
+    build:
+      runs-on: ubuntu-latest
+
+      steps:
+        - name: Checkout code
+          uses: actions/checkout@v3
+
+        - name: Run your Node.js code
+          run: node altstore-transform.js
+
+        - name: Upload artifacts
+          uses: actions/upload-artifact@v3
+          with:
+            name: my-artifacts
+            path: output/
