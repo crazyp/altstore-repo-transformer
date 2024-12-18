@@ -24,3 +24,8 @@ jobs:
   #  - run: npm init
   #  - run: npm install
     - run: node altstore-transform.js
+    - name: Download a Build Artifact
+      uses: actions/download-artifact@v4.1.8
+          
+      
+            
