@@ -24,7 +24,6 @@ jobs:
   #  - run: npm init
   #  - run: npm install
     - run: node altstore-transform.js
-steps:
 - uses: actions/download-artifact@v4
 - name: Display structure of downloaded files
   run: ls -R
