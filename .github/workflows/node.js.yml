@@ -23,10 +23,7 @@ jobs:
         node-version: ${{ matrix.node-version }}
   #  - run: npm init
   #  - run: npm install
-  #  - run: node altstore-transform.js
-  
-    - run: npm ci
-    - run: npm run build --if-present    
+    - run: node altstore-transform.js
     - name: Download a Build Artifact
       uses: actions/download-artifact@v4.1.8
       with:
