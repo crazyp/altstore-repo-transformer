@@ -21,11 +21,10 @@ jobs:
       uses: actions/setup-node@v3
       with:
         node-version: ${{ matrix.node-version }}
-  #  - run: npm init
-  #  - run: npm install
+
     - run: node altstore-transform.js
-- uses: actions/download-artifact@v4
-- name: Display structure of downloaded files
-  run: ls -R
+    - uses: actions/download-artifact@v4
+      name: Display structure of downloaded files
+    - run: ls -R
       
             
